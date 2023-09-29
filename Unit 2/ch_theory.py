@@ -165,3 +165,81 @@ print(listt.count(1))
 # len() method
 thissList = [1,2,3,4,5,6]
 print(len(thissList))
+
+print("----------------------------------------------------------------")
+
+
+# Tuples in python 
+'''
+    Tuple is similar to a list in some cases.
+    Tuple is a collection of any types of elements
+    Tuple is immutable, so we can not modify or change it.
+    Tuple can not contains duplicates.
+'''
+
+# create a tuple
+# way 1
+t1 = 'java', 'python', 'c#'
+print(t1)
+print(type(t1))
+# way 2
+t2 = ('java', 'python', 'c#')
+print(t2)
+print(type(t1))
+
+# concate two tuples
+tuple3 = t1 + t2
+print(tuple3)
+
+# Rule 1 : Immutable
+t3 = (1,2,3,4,5)
+# t3[1] = 1000 # throws an error
+print(t3)
+
+# Nesting of tuples
+t5 = (5,6,6,7)
+t6 = (90,89,78)
+nestTuple = ("java", "python", "c#" , t5, t6)
+print(nestTuple)
+
+# Repetition in tuples
+t7 = ("jaymin", ) * 5
+print(t7)
+print(type(t7))
+
+# Slicing of tuples
+myTuple = (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16)
+print(myTuple[3:9])
+print(myTuple[3:])
+print(myTuple[:9])
+print(myTuple[:])
+print(myTuple[:-10])
+print(myTuple[-10:])
+print(myTuple[::-1])
+
+# Deleting tuples
+thisTupe = (1,2,3,4,5,6,7,8)
+del thisTupe
+# print(thisTupe) # throws an error because this tuple is not exists
+
+# Converting List to Tuples
+list1 = [1,2,3,4,5,6,7,8]
+myTuple2 = tuple(list1)
+print(list1) 
+print(myTuple2) 
+print(type(myTuple2)) 
+
+# converting tuples to list
+tuple4 = (1,2,3,4,5,6,8)
+convertList = list(tuple4)
+print(tuple4)  
+print(convertList) 
+
+
+# Dictionary
+
+dict = {
+    1 : 'jaymin',
+    2 : 'kishan'
+}
+print(dict.items())
