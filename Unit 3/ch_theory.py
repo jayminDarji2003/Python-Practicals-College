@@ -248,3 +248,78 @@ print(c.mul(10,20))
 print(c.div(10,20))
 print(c.sub(10,20))
 
+
+# Mehtod Resoultion order
+# ex
+
+class A(object):
+    def method(self):
+        print("A class method")
+        # super().method()
+class B(object):
+    def method(self):
+        print("B class method")
+        # super().method()
+class C(object):
+    def method(self):
+        print("C class method")
+        # super().method()
+
+class x(A,B):
+    def method(self):
+        print("X class method")
+        super().method()
+    
+class y(B,C):
+    def method(self):
+        print("Y class method")
+        super().method()
+
+class p(A,B,C):
+    def method(self):
+        print("P class method")
+        super().method()
+
+newp = p()
+print(p.mro())
+newp.method()
+
+
+print("----------------------------------------------------------------")
+
+# simple python program to demonstrate operator overloading
+
+# + operator overloading
+print(1 + 2)
+print("Hello " + "World!")
+print([1,2,3] + [4,5,6])
+
+# * operator overloading
+print(4 * 5)
+print("Hello " * 3)
+
+
+print("----------------------------------------------------------------")
+
+# method overloading
+
+class Calculator:
+    def add(self, a, b=None, c=None):
+        if b is None and c is None:
+            return a
+        elif b is not None and c is None:
+            return a + b
+        elif b is not None and c is not None:
+            return a + b + c
+
+# Create an instance of the Calculator class
+calc = Calculator()
+
+# Examples of method overloading
+result1 = calc.add(5)
+result2 = calc.add(5, 10)
+result3 = calc.add(5, 10, 15)
+
+print(result1)  # Output: 5
+print(result2)  # Output: 15
+print(result3)  # Output: 30
