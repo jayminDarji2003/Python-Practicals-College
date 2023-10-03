@@ -90,3 +90,161 @@ class myStaticMethod:
         return "This is static method"
     
 print(myStaticMethod.getName())
+
+
+print("----------------------------------------------------------------")
+
+# Inheritance in python
+'''
+    Inheritance is the reusability of code.  It has base class and derived class.
+'''
+
+# class Parent:
+#     # constructor
+#     def __init__(self):
+#         print("Parent constructor called")
+#         self.parentName = "Parent"
+
+#     # instance method
+#     def getName(self):
+#         print("Parent Name is : ", self.parentName)
+
+# class Child(Parent):
+#     # constructor
+#     def __init__(self):
+#         print("Child constructor called")
+#         self.childName = "Child"
+
+#     # instance method
+#     def getName(self):
+#         print("Child Name is : ", self.childName)
+
+
+# p = Parent()
+# p.getName()
+
+# c = Child()
+# c.getName()
+
+
+# write a program that will access the base class constructor from derived class.
+
+class Teacher:
+    def __init__(self,scName):
+        self.schoolName = scName
+
+    def display(self):
+        print("The school name is : ", self.schoolName)
+
+    def setName(self,name):
+        self.schoolName = name
+
+class Student(Teacher):
+    # nothing doing // pass
+    def print(self):
+        print("this class nothing doing")
+
+st = Student("KIRC CAMPUS")
+st.display()
+st.setName("BHAGINI VIDHYALAYA")
+st.display()
+
+
+# Constructor overriding and method overriding
+class ts:
+    def __init__(self,tsName):
+        self.schoolname = tsName
+
+    def display(self):
+        print("School name: " + self.schoolname)
+
+class st(ts):
+    def __init__(self,tsname,std):
+        self.schoolname = tsname
+        self.std = std
+
+    def display(self):
+        print("School name: " + self.schoolname)
+        print("std: " , self.std)
+
+s = st("kirc",8)
+s.display()
+
+# super() method
+# the super() method is used to give reference to the base class to child class.
+class myClass:
+    # constructor
+    def __init__(self,msg):
+        self.message = msg
+
+    # instance method
+    def display(self):
+        print("The message is : ", self.message)
+        print("Parent class")
+
+class myChild(myClass):
+    # constructor
+    def __init__(self,msg):
+        super().__init__(msg)
+    
+    # instance method
+    def display(self):
+        super().display()
+
+ms = myChild("Keep learning and keep progressing")
+ms.display()
+
+
+# Types of inheritance
+'''
+    Two types of inheritance
+        1. single inheritance
+            --> one parent, lots of child
+        2. multiple inheritance
+            -> lots of parent and only one child
+'''
+
+# single inheritance example
+class a:
+    def display(self):
+        print("Parent class")
+class b(a):
+    def display(self):
+        super().display()
+        print("Child class 1")
+class c(a):
+    def display(self):
+        super().display()
+        print("Child class 2")
+
+print("--------------------------------")
+x = b()
+x.display()
+y = c()
+y.display()
+
+
+# Multiple inheritance
+# In multiple inheritance there are only one child and more than one parents
+
+class Par1:
+    def sum(self,a,b):
+        return a+b
+class Par2:
+    def mul(self,a,b):
+        return a*b
+class Par3:
+    def div(self,a,b):
+        return a/b
+
+class Child(Par1,Par2,Par3):
+    def sub(self,a,b):
+        return a-b
+    
+print("--------------------------------")
+c = Child()
+print(c.sum(10,20))
+print(c.mul(10,20))
+print(c.div(10,20))
+print(c.sub(10,20))
+
