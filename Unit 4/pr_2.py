@@ -8,3 +8,9 @@ except (TypeError,SyntaxError):
     print("Error")
 else:
     print(ans)
+
+
+'''
+    v --> int
+    v2 --> string
+'''
