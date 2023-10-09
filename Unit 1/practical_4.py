@@ -13,3 +13,8 @@ print('--------------------------------')
 new_sequence = range(1,100,5)
 for i in new_sequence:
     print(i)
+
+print("--------------------------------")
+
+listt = [i for i in range(1,101,2)]
+print(listt)
