@@ -4,7 +4,6 @@
 number = 6
 arr = bytes(number)
 print(type(arr), arr)
-
 arr2 = bytes(3)
 print(type(arr2), arr2)
 
